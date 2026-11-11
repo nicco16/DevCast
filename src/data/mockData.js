@@ -101,7 +101,7 @@ export const episodes = [
     description: "Descubre cómo JavaScript hace que las páginas web sean interactivas y dinámicas.",
     tag: "EMPEZANDO",
     releasedAt: "Hoy",
-    audioUrl: null,
+    audioUrl: "/audios/javascript/Capitulo1-Que es JS.mp3",
   },
   {
     id: "html-structure",
