@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0e14;
+  --foreground: #e1e2e9;
+
+  --surface-container: #1d2025;
+  --surface-container-high: #272a2f;
+  --surface-container-highest: #32353a;
+
+  --on-surface: #e1e2e9;
+  --on-surface-variant: #9ca3af;
+
+  --outline-variant: #424754;
+
+  --primary: #adc6ff;
+  --on-primary: #002e6a;
+
+  --tertiary: #ffb786;
+  --secondary: #ddb7ff;
+  --secondary-container: #6f00be;
+  --error: #ffb4ab;
+  --surface-bright: #36393f;
+  --surface-container-low: #191c21;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-bright: var(--surface-bright);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-tertiary: var(--tertiary);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-error: var(--error);
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --spacing-margin-desktop: 40px;
+  --spacing-margin-mobile: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32353a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #424754;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-card {
+  background: rgba(20, 23, 28, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(66, 71, 84, 0.25);
+}
+
+.glass-card:hover {
+  border-color: rgba(173, 198, 255, 0.4);
+  box-shadow: 0 0 20px rgba(173, 198, 255, 0.1);
+}
