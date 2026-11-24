@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import AppLayout from "./components/layout/AppLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
@@ -26,16 +27,19 @@ function WelcomeRoute() {
 // Define la estructura principal de rutas de la aplicación.
 export default function App() {
   return (
-    <Routes>
-      <Route path="/welcome" element={<WelcomeRoute />} />
-      <Route element={<RequireUser><AppLayout /></RequireUser>}>
-        <Route index element={<Home />} />
-        <Route path="explore" element={<Explore />} />
-        <Route path="categories" element={<Categories />} />
-        <Route path="bookmarks" element={<Bookmarks />} />
-        <Route path="progress" element={<Progress />} />
-        <Route path="profile" element={<Profile />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/welcome" element={<WelcomeRoute />} />
+        <Route element={<RequireUser><AppLayout /></RequireUser>}>
+          <Route index element={<Home />} />
+          <Route path="explore" element={<Explore />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="bookmarks" element={<Bookmarks />} />
+          <Route path="progress" element={<Progress />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+      </Routes>
+      <Analytics />
+    </>
   );
 }
